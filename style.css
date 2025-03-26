@@ -1,4 +1,80 @@
+
 *, body {
   margin: 0;
   padding: 0;
 }
+
+.calculator-body {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #3A3042;
+  width: 18vw;
+  margin: 15vh auto;
+  border-radius: 35px;
+  padding: 36px;
+}
+
+.calculator-screen {
+  display: flex;
+  justify-content: flex-end;  
+  align-items: flex-end; 
+  background-color: #ABB2A1;
+  height: 10vh;
+  font-weight: 400;
+  font-size: 42px;
+  font-family: "Roboto", sans-serif;
+}
+
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 20px;
+}
+
+/* Default styles for buttons */
+.btn {
+  height: 7vh;
+  font-weight: 400;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  box-shadow: 0px 10px 0px var(--shadow-color);
+  background-color: var(--bg-color);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+/* Digits */
+.btn-num {
+  --bg-color: #C07E7E;
+  --shadow-color: #cf77777e;
+}
+
+/* Operations: + - × / */
+.btn-operate {
+  --bg-color: #868DC1;
+  --shadow-color: #41487D;
+}
+
+/* Functions: AC, Del, = */
+.btn-func {
+  --bg-color: #5F9EA0;
+  --shadow-color: #3a5f5f;
+}
+
+/* Click animation */
+.btn:active {
+  transform: translateY(5px);
+  box-shadow: 0px 5px 0px var(--shadow-color);
+}
+
+/* The last row of buttons */
+.btn-clear,
+.btn-equals {
+  grid-column: span 2; 
+}
+
