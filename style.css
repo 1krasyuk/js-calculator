@@ -55,7 +55,7 @@
 }
 
 /* Operations: + - × / */
-.btn-operate {
+.btn-operate, .btn-decimal {
   --bg-color: #868DC1;
   --shadow-color: #41487D;
 }
